@@ -18,7 +18,11 @@ body {
   background-color: black; 
 }
 
+
+
 /* MAIN STYLES */
+
+
 
 /* targets a class */
 .container {
@@ -39,4 +43,62 @@ h1 {
     color: red;
     margin-bottom: 25px;
     text-transform: uppercase;
+    line-height: 1.1em;
+}
+
+nav a{
+    color: inherit;
+    text-transform: uppercase;
+
+    /* remove the underline on the links */
+    text-decoration: none;
+
+    /* make the anchor tags block elements (so they behave like divs) */
+    display: block;
+
+    /* make them look like buttons with colours */
+    background-color: blue;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+
+    padding: 10px;
+    text-align: center;
+}
+
+/* prevent the borders from overlapping each other! */
+/* nav li:first-child {
+    border-top: 2px solid white;
+}
+
+nav li {
+    border-bottom: 2px solid white; 
+} */
+
+/* creates distance between the last button and the paragraph text */
+nav li:last-child {
+    margin-bottom: 10px;
+}
+
+
+
+nav a:hover, nav a:active {
+    background-color: rgb(0, 0, 117);
+    color: grey;
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+@media screen and (min-width:720px) {
+    /* only apply these styles when the screen is 720px width (minimum) or larger */
+    nav a {
+        float: left;
+        width: 25%;
+    }
+    
+    main {
+        clear: both;
+    }
 }
